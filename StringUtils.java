@@ -50,35 +50,7 @@ public class StringUtils {
 		}
 	}
 
-	/**
-	 * 获得MD5加密字符串
-	 * 
-	 * @param str
-	 *            字符串
-	 * @return
-	 */
-	public static String getMD5Str(String str) {
-		MessageDigest messageDigest = null;
-		try {
-			messageDigest = MessageDigest.getInstance("MD5");
-			messageDigest.reset();
-			messageDigest.update(str.getBytes("UTF-8"));
-		} catch (NoSuchAlgorithmException e) {
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
-		byte[] byteArray = messageDigest.digest();
-		StringBuffer md5StrBuff = new StringBuffer();
-		for (int i = 0; i < byteArray.length; i++) {
-			if (Integer.toHexString(0xFF & byteArray[i]).length() == 1)
-				md5StrBuff.append("0").append(
-						Integer.toHexString(0xFF & byteArray[i]));
-			else
-				md5StrBuff.append(Integer.toHexString(0xFF & byteArray[i]));
-		}
-		return md5StrBuff.toString();
-	}
-
+	
 	/**
 	 * 对流转化成字符串
 	 * 
@@ -638,39 +610,4 @@ public class StringUtils {
 		return isEnglist;
 	}
 	
-	/**
-	 * 获取拼音
-	 * @param src
-	 * @return
-	 */
-	public static String getPinYin(String src) {
-		char[] t1 = null;
-		t1 = src.toCharArray();
-		// System.out.println(t1.length);
-		String[] t2 = new String[t1.length];
-		// System.out.println(t2.length);
-		// 设置汉字拼音输出的格式
-		HanyuPinyinOutputFormat t3 = new HanyuPinyinOutputFormat();
-		t3.setCaseType(HanyuPinyinCaseType.LOWERCASE);
-		t3.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
-		t3.setVCharType(HanyuPinyinVCharType.WITH_V);
-		String t4 = "";
-		int len = t1.length;
-		for (int i = 0; i < len; i++) {
-			try {
-			// 判断是否为汉字字符
-			if (StringUtils.isChinese(t1[i])) {
-				t2 = PinyinHelper.toHanyuPinyinStringArray(t1[i], t3);// 将汉字的几种全拼都存到t2数组中
-				t4 += t2[0];// 取出该汉字全拼的第一种读音并连接到字符串t4后
-			} else {
-				// 如果不是汉字字符，直接取出字符并连接到字符串t4后
-				t4 += Character.toString(t1[i]);
-			}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-		return t4;
-	}
-
 }

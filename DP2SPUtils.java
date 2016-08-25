@@ -4,7 +4,6 @@ import android.content.Context;
 
 /**
  * DP转SP
- * Created by user on 2016/7/28.
  */
 public class DP2SPUtils {
     /**

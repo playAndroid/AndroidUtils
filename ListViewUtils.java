@@ -7,7 +7,6 @@ import android.widget.ListView;
 
 /**
  * ListView工具类
- * Created by user on 2016/7/28.
  */
 public class ListViewUtils {
     /**

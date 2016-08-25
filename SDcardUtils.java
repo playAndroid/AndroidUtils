@@ -70,7 +70,7 @@ public class SDcardUtils {
     }
 
     /**
-     * 检查sdcard中是否存在制定路径的文件
+     * 检查sdcard中是否存在指定路径的文件
      *
      * @param path
      * @return

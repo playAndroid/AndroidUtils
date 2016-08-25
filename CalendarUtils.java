@@ -7,11 +7,7 @@ import java.util.Date;
 
 
 /**
- * Created by IntelliJ IDEA.
  * 把公历时间处理成农历时间
- * Date: 12-11-21
- * Time: 下午3:56
- * To change this template use File | Settings | File Templates.
  */
 public class CalendarUtils {
     /**

@@ -3,11 +3,7 @@ package geminihao.com.androidutils.utils;
 import java.util.Calendar;
 
 /**
- * Created by IntelliJ IDEA.
  * 主要用于把公历日期处理成24节气
- * Date: 12-11-22
- * Time: 下午4:09
- * To change this template use File | Settings | File Templates.
  */
 public class SolarTermsUtils {
 

@@ -11,7 +11,6 @@ import java.util.TimerTask;
 
 /**
  * 键盘工具类
- * Created by user on 2016/7/28.
  */
 public class KeyBoardUtils {
     /**

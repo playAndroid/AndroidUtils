@@ -343,8 +343,6 @@ public class AlbumAndComera {
 
     /**
      * 描述: 裁剪方法</br>
-     * 创建时间：2016年3月16日</br>
-     *
      * @param activity
      * @param cropInPath  裁剪的图片地址
      * @param cropOutPath 裁剪完成后输出的图片地址
@@ -395,7 +393,6 @@ public class AlbumAndComera {
     /**
      * 描述: 图片处理成900*600的方法(最好是放在线程里头处理)</br>
      * 同时压缩图片大小<=800kb
-     * 创建时间：2016年3月16日</br>
      *
      * @param cropOutPath 裁剪输出的路径
      * @return
